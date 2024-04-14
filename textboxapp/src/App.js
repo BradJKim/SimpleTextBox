@@ -9,6 +9,7 @@ function App() {
     { id: 2, text: 'How are you?' }
   ]);
   const [inputMessage, setInputMessage] = useState('')
+  const [isRight, setIsRight] = useState(true)
   
   useEffect(() => { // updates the textbox container with current messages
     console.log("Messages Updated")  
@@ -17,17 +18,20 @@ function App() {
   const addMessage = () => {
     const newMessage = {
       id: Math.random(), 
-      text: inputMessage
+      text: inputMessage,
+      isRight: isRight
     };
     setMessages(prevMessages => [...prevMessages, newMessage]);
     setInputMessage('');
+    if(isRight) setIsRight(false)
+    else setIsRight(true)
   }
 
   return (
     <div className="App">
       <div className="TextboxContainer">
         {messages.map(message => (
-          <MessageBox key={message.id} text={message.text} />
+          <MessageBox key={message.id} text={message.text} isRight={message.isRight}/>
         ))}
       </div>
       <div className="InputBox">

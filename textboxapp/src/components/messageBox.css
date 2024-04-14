@@ -1,8 +1,30 @@
+.wrapper-div-right {
+  display: flex;
+  justify-content: end;
+}
+
+.wrapper-div-left {
+  display: flex;
+  justify-content: front;
+}
+
+.wrapper-div-left:hover{
+  border:purple 1px solid
+}
+
+.wrapper-div-right:hover{
+  border:purple 1px solid
+}
+
 .message-box {
-    background-color: #f0f0f0;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+  background-color: #f0f0f0;
+  padding: 1px;
+  margin-bottom: 5px;
+  border-radius: 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  max-width: max-content;   /* change this part */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
   

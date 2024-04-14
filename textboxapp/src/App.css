@@ -1,8 +1,25 @@
-.TextboxContainer {
-  border: red;
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.TextboxContainer {
+  padding: 10px;
+  border-radius: 5px;
+  height: 500px;
+  width: 500px;
+  overflow: auto;
+  
+}
 
+.TextboxContainer:hover {
+  border: red 5px solid;
+}
+
+.InputBox:hover {
+  border: blue 5px solid;
+}
 
 /* .App {
   text-align: center;
